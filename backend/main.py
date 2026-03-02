@@ -28,6 +28,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {"message": "Resume Parser API is running"}
+
 parser_service = ParserService()
 ai_service = AIService()
 chat_service = ChatService()
