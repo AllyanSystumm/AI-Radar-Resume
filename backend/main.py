@@ -28,7 +28,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD", "OPTIONS"])
 def root():
     return {"message": "Resume Parser API is running"}
 
