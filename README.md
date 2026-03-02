@@ -60,3 +60,4 @@ An advanced AI-powered resume parser and candidate matching system.
 3. **View Analysis**: Check the job dashboard to see ranked candidates and detailed AI analysis.
 4. **Chat**: Use the chat interface to ask questions about the candidates.
    - **Integrated Chatbot**: The recruiter can ask directly, for example: "Give me the top scorer of the graphic designing job". The chatbot has full access to the database and can query candidate information.
+<img width="1647" height="892" alt="Screenshot from 2026-03-02 16-46-31" src="https://github.com/user-attachments/assets/c8dab815-beab-42a4-b14e-96d06b5361c8" />
