@@ -7,7 +7,12 @@ load_dotenv()
 
 class AIService:
     def __init__(self):
-        self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        api_key = os.getenv("GROQ_API_KEY")
+        if not api_key:
+            # Defer failure to request time instead of crashing app startup
+            self.client = None
+        else:
+            self.client = Groq(api_key=api_key)
         self.model = "llama-3.1-8b-instant"
     
     async def analyze_resume(self, resume_text: str, jd_text: str):
@@ -84,6 +89,9 @@ RESUME:
 JOB DESCRIPTION:
 {jd_text}
 """
+
+        if self.client is None:
+            raise RuntimeError("GROQ_API_KEY is not configured on the server.")
 
         response = self.client.chat.completions.create(
             messages=[
