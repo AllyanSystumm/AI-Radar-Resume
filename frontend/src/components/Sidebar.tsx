@@ -101,9 +101,8 @@ const Sidebar = () => {
 
                     <button
                         onClick={logout}
-                        className="w-full flex items-center gap-3 px-4 py-3 mt-1 rounded-xl text-slate-400 hover:bg-blue-500/10 hover:text-blue-400 transition-all font-medium text-sm"
+                        className="w-full flex items-center justify-center px-4 py-3 mt-4 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all font-bold text-sm shadow-lg active:scale-95"
                     >
-                        <LogOut className="w-5 h-5" />
                         Sign Out
                     </button>
                 </div>
