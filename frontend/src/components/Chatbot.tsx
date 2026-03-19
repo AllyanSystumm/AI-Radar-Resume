@@ -31,7 +31,7 @@ const Chatbot: React.FC = () => {
         setLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:8000/chat', {
+            const response = await axios.post('http://localhost:8001/chat', {
                 message: userMessage,
                 resume_text: analysisData?.resume_text || "",
                 jd_text: analysisData?.jd_text || ""

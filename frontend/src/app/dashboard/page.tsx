@@ -38,7 +38,7 @@ function DashboardContent() {
 
     const fetchJobs = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/jobs');
+            const response = await axios.get('http://localhost:8001/jobs');
             const jobsData = response.data;
             // Ensure jobs are sorted by ID descending (most recent first)
             const sortedJobs = [...jobsData].sort((a, b) => b.id - a.id);
@@ -58,7 +58,7 @@ function DashboardContent() {
         e.stopPropagation();
         if (confirm("Are you sure you want to delete this job post?")) {
             try {
-                await axios.delete(`http://localhost:8000/jobs/${jobId}`);
+                await axios.delete(`http://localhost:8001/jobs/${jobId}`);
                 fetchJobs();
             } catch (error) {
                 console.error("Failed to delete job", error);

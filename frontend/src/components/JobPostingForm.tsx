@@ -23,7 +23,7 @@ const JobPostingForm: React.FC = () => {
         setError(null);
 
         try {
-            await axios.post('http://localhost:8000/jobs', {
+            await axios.post('http://localhost:8001/jobs', {
                 title: title.trim(),
                 description: description.trim()
             });

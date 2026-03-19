@@ -28,7 +28,7 @@ export default function CandidateAnalysisPage() {
     const fetchCandidateAnalysis = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`http://localhost:8000/candidates/${candidateId}`);
+            const response = await axios.get(`http://localhost:8001/candidates/${candidateId}`);
             setAnalysisData(response.data);
         } catch (error) {
             console.error("Failed to fetch candidate analysis", error);

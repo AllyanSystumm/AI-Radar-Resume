@@ -30,7 +30,7 @@ export default function ApplyPage() {
 
     const fetchJobDetails = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/jobs/${jobId}`);
+            const response = await axios.get(`http://localhost:8001/jobs/${jobId}`);
             setJob(response.data);
         } catch (error) {
             console.error("Failed to fetch job", error);
@@ -60,7 +60,7 @@ export default function ApplyPage() {
         formData.append("resume", file);
 
         try {
-            await axios.post(`http://localhost:8000/jobs/${jobId}/apply`, formData, {
+            await axios.post(`http://localhost:8001/jobs/${jobId}/apply`, formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
             setSubmitted(true);

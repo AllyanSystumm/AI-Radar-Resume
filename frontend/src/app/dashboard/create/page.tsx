@@ -23,7 +23,7 @@ export default function CreateJobPage() {
                 </Link> */}
                 <button
                     onClick={logout}
-                    className="flex items-center gap-2 px-6 py-2.5 bg-rose-50 text-rose-600 rounded-full font-bold text-xs border border-rose-100 hover:bg-rose-100 transition-all shadow-sm"
+                    className="flex items-center gap-2 px-6 py-2.5 bg-blue-50 text-blue-600 rounded-full font-bold text-xs border border-blue-100 hover:bg-blue-100 transition-all shadow-sm"
                 >
                     <LogOut className="w-4 h-4" />
                     Sign Out

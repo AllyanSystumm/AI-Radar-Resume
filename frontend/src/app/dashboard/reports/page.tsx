@@ -41,7 +41,7 @@ export default function ReportsPage() {
     const fetchJobs = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('http://localhost:8000/jobs');
+            const response = await axios.get('http://localhost:8001/jobs');
             const jobsData = response.data;
             const sortedJobs = [...jobsData].sort((a, b) => b.id - a.id);
             setJobs(sortedJobs);

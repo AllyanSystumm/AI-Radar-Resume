@@ -51,7 +51,7 @@ An advanced AI-powered resume parser and candidate matching system.
 
 - `backend/`: FastAPI application, database models, and services.
 - `frontend/`: Next.js frontend application.
-- `docker-compose.yml`: Docker services configuration.
+- `docker-compose.yml`: Docker services configurationn.
 
 ## Usage
 

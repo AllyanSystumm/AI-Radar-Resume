@@ -31,7 +31,7 @@ export default function JobDetailsPage() {
 
     const fetchJobDetails = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/jobs/${jobId}`);
+            const response = await axios.get(`http://localhost:8001/jobs/${jobId}`);
             setJob(response.data);
         } catch (error) {
             console.error("Failed to fetch job", error);
@@ -41,7 +41,7 @@ export default function JobDetailsPage() {
     const fetchCandidates = async () => {
         try {
             setLoadingCandidates(true);
-            const response = await axios.get(`http://localhost:8000/jobs/${jobId}/candidates`);
+            const response = await axios.get(`http://localhost:8001/jobs/${jobId}/candidates`);
             setCandidates(response.data);
         } catch (error) {
             console.error("Failed to fetch candidates", error);
