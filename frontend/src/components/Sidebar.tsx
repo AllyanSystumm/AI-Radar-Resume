@@ -35,7 +35,7 @@ const Sidebar = () => {
 
     return (
         <aside className="w-[352px] bg-[#0f172a] text-white flex flex-col h-screen fixed left-0 top-0 z-50 shadow-2xl overflow-hidden font-sans border-r border-white/5">
-            <div className="p-8 border-b border-white/10">
+            <div className="p-8 border-b border-white/20">
                 <h1 className="text-2xl font-black tracking-tight flex items-center gap-1.5 whitespace-nowrap">
                     AI <span className="text-blue-500">Resume</span> Radar
                 </h1>
